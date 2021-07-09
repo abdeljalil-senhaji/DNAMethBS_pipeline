@@ -1,5 +1,5 @@
 # Pipeline detection DNA methylation : **DNAmethBS**
-![bootstrap](logo1.png)
+![](logo1.png)
 
 
 
