@@ -2,7 +2,7 @@
 #> EpiTree project
 
 
-! [N | Solid] (https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
+![N | Solid] (https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
 
 
 ## Authors
