@@ -1,4 +1,4 @@
-# Pipeline detection DNA methylation : **DNAmethBS** ![bootstrap](Image/logo1.PNG)
+# Pipeline detection DNA methylation : **DNAmethBS**        ![bootstrap](Image/logo1.PNG)
 
 A bioinformatics pipeline for the detection of DNA methylation from WGBS and MC-Seq sequencing data. This pipeline, adapted to the needs of the EpiTree project, can be fully transposed to other methylation datasets in plants.
 
