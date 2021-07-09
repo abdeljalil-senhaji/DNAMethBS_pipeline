@@ -1,6 +1,4 @@
-# Pipeline detection DNA methylation : **DNAmethBS**
-
-![bootstrap](Image/logo1.png)
+# Pipeline detection DNA methylation : **DNAmethBS** ![bootstrap](Image/logo1.PNG)
 
 # **EpiTree project ANR**
 ![enter image description here](https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
