@@ -20,7 +20,9 @@ In any case, if you use this workflow in a paper, don't forget to give credits t
 
 
 ## Description
+
 ![bootstrap](Image/rg_dag-meth.png)
+
 This pipeline is based on Snakemake. It is able to detect DNA methylation in trees with associated R and python scripts. 5 steps:
 
 - Cleaning of raw data followed by quality control
@@ -73,6 +75,9 @@ The config.yaml can also be used to modify the parameters (mainly the call of th
 
 
 ## Configure pipeline and run
+
+![bootstrap](Image/config_pipe.PNG)
+
 Pipeline Folder File:
 - Results: results folder
 - DAG: file for the graphical representation of the pipeline there is a script for the generation of the two histograms at the same time - slurm: File for the generation of information on the resources consumed by the pipeline (CPU, MEM, calculation time ... )
