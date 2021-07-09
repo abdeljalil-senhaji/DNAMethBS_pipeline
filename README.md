@@ -1,6 +1,6 @@
-# Pipeline detection DNA methylation : **DNAmethBS**
+# Pipeline detection DNA methylation : **DNAmethBS** [ici](Image/logo1.png)
 
-![bootstrap](Image/logo1.png)
+
 
 
 
