@@ -1,12 +1,15 @@
-# DNA methylation detection pipeline in trees
-#> EpiTree project
+# Pipeline detection DNA methylation : **DNAmethBS**
+![bootstrap](logo1.png)
 
-![enter image description here](https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
+
+
+# EpiTree project ANR ![enter image description here](https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
 
 
 ## Authors
 
 * Abdeljalil SENHAJI RACHIK, https://github.com/abdeljalil-senhaji
+
 ## Usage
 
 In any case, if you use this workflow in a paper, don't forget to give credits to the authors by citing the URL of this (original) repository and, if already available, its DOI (see above).
@@ -27,7 +30,6 @@ This pipeline is based on Snakemake. It is able to detect DNA methylation in tre
 - Detection of methylated cytosines (mC) in the three methylation contexts
 - Basic statistical analyzes on the detection of methylations
 
-`![bootstrap](Images/workflow.png)`
 
 ```
 Commande line 
