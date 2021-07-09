@@ -1,31 +1,23 @@
+
 ######################### Configuration snakemake #############################
 
-#-----------------------------------> path pipeline 
+## -----------------------------------> variable path pipeline 
 
-#  Path environnement pipeline 
+# Path of results
 
-path-work-env: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/"
-
-# Software_path
- 
-# GitHub Repository. https://github.com/zyndagj/BSMAPz.
-
-tools: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Tools/BSMAPz-master"
+pathresults: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Results/"
 
 # Switch reference genome Populus Trichocarpa V3/V4 
 
 REF_GENOME: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Ref_trichocarpa/Ptrichocarpa_444_v3.0.fa"
 #REF_GENOME: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Ref_trichocarpa/Ptrichocarpa_533_v4.0.fa"
 
-# Path of results
-
-pathresults: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Results/"
-
 # Number of samples for modeling THREADS of each rule in the pipeline
 
 NBSAMPLE: 1
 
-#-----------------------------------> Settings softwars
+
+## -----------------------------------> Settings softwars
 
 
 # All default settings except trimgalore :
@@ -37,27 +29,32 @@ LENGTH: 36
 QUALITY: 20
 ADAPTER1: --illumina
 ADAPTER2: AAATCAAAAAAAC
-#CLIP_R1: 
-#CLIP_R2:
-#TRIM-N:
 
 ## rule duplicate specify ON-Target
 
-#Path the file bed 
-pathbed: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/script/merge_covered.bed"
 
 # SELECT EITHER BY SPECIFY THE ONTARGET (1) OR NOT (0)
 Target: 0
 
+#Path the file bed 
+pathbed: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/script/merge_covered.bed"
 
-#-----------------------------------> Part not modifiable by the user
+## -----------------------------------> path pipeline 
+
+#  Path environnement pipeline 
+
+path-work-env: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/"
+
+# Software_path GitHub Repository (https://github.com/zyndagj/BSMAPz)
+
+tools: "/env/cng/proj/LEE/pipelines/DNAMethBS_pipeline/Tools/BSMAPz-master"
 
 # Wildcard 
-    
+
 CONTEXT: ['CG', 'CHH', 'CHG']
 READS: ['1', '2']
 
-#------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
 
 
 
