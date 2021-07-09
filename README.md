@@ -1,29 +1,23 @@
 # DNA methylation detection pipeline in trees
 #> EpiTree project
 
-
-![N | Solid] (https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
+![enter image description here](https://www6.inrae.fr/var/internet6_national_epitree_project/storage/images/le-projet-epitree/28764-59-fre-FR/Le-projet-EPITREE_inra_image.png)
 
 
 ## Authors
 
 * Abdeljalil SENHAJI RACHIK, https://github.com/abdeljalil-senhaji
-## Usage 
-
+## Usage
 
 In any case, if you use this workflow in a paper, don't forget to give credits to the authors by citing the URL of this (original) repository and, if already available, its DOI (see above).
 
 
-#### Step 1: Cloning the git repository
-
-Clone this repository and move to it
-```
-git clone "https://gitlab."
-cd DNAmethBS_pipeline
-```
-#### Step 1: Cloning the git repository
+#### Step 1: Obtain a copy of this workflow
 
 > **Note:**
+
+
+
 ## Description
 This pipeline is based on Snakemake. It is able to detect DNA methylation in trees with associated R and python scripts. 5 steps:
 
@@ -33,39 +27,39 @@ This pipeline is based on Snakemake. It is able to detect DNA methylation in tre
 - Detection of methylated cytosines (mC) in the three methylation contexts
 - Basic statistical analyzes on the detection of methylations
 
+`![bootstrap](Images/workflow.png)`
+
+```
+Commande line 
+``` 
 ## System requirements
 
 Here is the list of tool dependencies with the version tested and used for the pipeline.
 Absolute paths must be precise in the config.yaml file for the BSMAPZ tool is not installed in the CEA cluster environment.
 
-- module load snakemake / 5.11.2
-- module load rstudio / 1.3.1093 >>>> package ??
-- module load gnuplot / 4.6.2
-- load pigz / 2.4 module
-- module load trimgalore / 0.6.5
-- module load fastqc / 0.11.9
-- moduel load multiqc / 1.9
-- module load samtools / 1.11
+- module load **snakemake** / 5.11.2
+- module load **rstudio** / 1.3.1093 >>>> package ??
+- module load **gnuplot** / 4.6.2
+- module load **pigz** / 2.4 module
+- module load **trimgalore** / 0.6.5
+- module load **fastqc** / 0.11.9
+- moduel load **multiqc** / 1.9
+- module load **samtools**  / 1.11
 
-## 1. Input files
+## 1. file configuration
 
 The user should use the config.yaml file to provide all the necessary inputs for the pipeline:
 > the necessary path
-- path-work-env: working environment
-- pathresults: environment of the results
-- pathdada: the data folder path
-- REF_GENOME: the reference fasta file path
+- **path-work-env**: working environment
+- **pathresults**: environment of the results
+- **pathdada**: the data folder path
+- **REF_GENOME**: the reference fasta file path
 > the parameters and options of the tools:
 - ERROR_RATE: 0.1
 - LENGTH: 36
 - QUALITY: 20
 - ADAPT1: --illumina
 - ADAPTER2: AAATCAAAAAAAC
-- CLIP_R1:
-- CLIP_R2:
-- TRIM-N:
-- CHROMOSOME: Chr01, Chr02
-- COVERAGE: 1
 > Snakemake options:
 - wildcard
 - NBSAMPLE:
@@ -87,8 +81,6 @@ Pipeline Folder File:
 - benchmarck: folder that contains information on resources (snakemake object)
 - DATA: folder where there are the samples (I put 2 samples with 1000bp just for the pipeline test)
 - Config_editeur: scripts for adapting VIM editors to be adapted with snakemake
-
-## Running the pipeline
 
 
 Pipeline Environment File
