@@ -6,6 +6,8 @@
 
 A bioinformatics pipeline for the **detection of DNA methylation** from **WGBS** and **MC-Seq** sequencing data. This pipeline, adapted to the needs of the **EpiTree project**, can be fully transposed to other methylation datasets in plants. The pipeline was built as part of the **ANR project EpiTree** ([https://www6.inrae.fr/epitree-project/Le-projet-EPITREE](https://www6.inrae.fr/epitree-project/Le-projet-EPITREE)).
 
+![bootstrap](Image//Le-projet-EPITREE_inra_image.png)
+
 ## Authors
 * Abdeljalil SENHAJI RACHIK, https://github.com/abdeljalil-senhaji
 
