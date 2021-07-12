@@ -21,7 +21,7 @@ In any case, if you use this workflow in a paper, don't forget to give credits t
 
 ## Description
 
-![bootstrap](Image/rg_dag-meth.png)
+                                                                    ![bootstrap](Image/rg_dag-meth.png)
 
 This pipeline is based on Snakemake. It is able to detect DNA methylation in trees with associated R and python scripts. 5 steps:
 
