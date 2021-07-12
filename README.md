@@ -40,7 +40,7 @@ This pipeline is based on **Snakemake**. It is able to detect DNA methylation in
 - **DAG**:  visualizing the DAG (Directed Acyclic Graph) of jobs
 - **Config_editeur**: scripts for adapting VIM editors to be adapted with snakemake
 #### Pipeline Environment File
-- ** test_submit_SLURM.sh**: script sbatch of job submission for pipeline test
+- **test_submit_SLURM.sh**: script sbatch of job submission for pipeline test
 - **submit_SLURM.sh**: job submission script
 - **config.yaml**: configuration file
 - **snakefile.smk**: file where there are all the pipeline rules.
@@ -52,14 +52,14 @@ submit_SLURM.sh and test_submit_SLURM.sh are specific to the **SLURM cluster**. 
 
 Here is the list of tool **dependencies** with the version tested and used for the pipeline.
 
-- module load **snakemake** / 5.11.2
+- module load **snakemake**/5.11.2
 - module load **r**/4.0.2
 - module load **bioconductor**/3.11 (Installation of package methylKit  v.1.18.0 https://bioconductor.org/packages/release/bioc/html/methylKit.html) 
-- module load **pigz** / 2.4 module
-- module load **trimgalore** / 0.6.5
-- module load **fastqc** / 0.11.9 (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
-- moduel load **multiqc** / 1.9 (https://multiqc.info/)
-- module load **samtools**  / 1.11
+- module load **pigz**/2.4 module (https://zlib.net/pigz/)
+- module load **trimgalore**/0.6.5
+- module load **fastqc**/0.11.9 (http://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- moduel load **multiqc**/1.9 (https://multiqc.info/)
+- module load **samtools**/1.11
 - module load **bsmapz**
 
 > **Note:** The absolute path of the **BsmapZ** tool (https://github.com/zyndagj/BSMAPz) must be specified in the config.yaml file. if is not installed !!
@@ -73,19 +73,19 @@ To run the pipeline, it is necessary to fill in these files:
 - **Config.yml**: file configuration pipeline 
 Modify the necessary pipeline paths : 
 ```
-pathresults: "path/Results/" # Path results pipeline
-path-work-env: "path/DNAMethBS_pipeline/" # path envirement pipeline
-tools: "path/Tools/BSMAPz-master" #Tools pipeline
-REF_GENOME: "/path/.fasta" #reference genome
+pathresults: "path/Results/"                                      # Path results pipeline
+path-work-env: "path/DNAMethBS_pipeline/"                         # path envirement pipeline
+tools: "path/Tools/BSMAPz-master"                                 # Tools pipeline
+REF_GENOME: "/path/.fasta"                                        # reference genome
 ```
 Parameter of the **Trimgalore** tool :
 ```
 # Params_trimgalore
-ERROR_RATE: 0.1
-LENGTH: 36
-QUALITY: 20
-ADAPTER1: --illumina
-ADAPTER2: AAATCAAAAAAAC
+ERROR_RATE: 0.1                                                   # Maximum allowed error rate (no. of errors divided by the length of the matching region)
+LENGTH: 36                                                        # Discard reads that became shorter than length INT because of either quality or adapter trimming. 
+QUALITY: 20                                                       # Trim low-quality ends from reads in addition to adapter removal.
+ADAPTER1: --illumina                                              # Adapter sequence to be trimmed. If not specified explicitly
+ADAPTER2: AAATCAAAAAAAC                                           # Optional adapter sequence to be trimmed off read 2 of paired-end files.
 ```
 > Note : tools are used by **default** except for trimgalore
 
@@ -102,13 +102,13 @@ path_work_env= '/path/envirennement_pipeline'
 ```
 Sbatch configuration for the Slurm cluster example:
 ```
-#SBATCH -J DNAMethBS-pipe-methylation-DNA # job name
-#SBATCH -q default # partition name
-#SBATCH -t 24:00:00 # maximum time of the job in seconds (time limit)
-#SBATCH -N 1  # number of parallel tasks
-#SBATCH -c 36 # number of cores per task
-#SBATCH -o ./slurm_%j.out # standard output redirection
-#SBATCH -e ./slurm_%j.err # standard error redirection
+#SBATCH -J DNAMethBS-pipe-methylation-DNA                           # job name
+#SBATCH -q default                                                  # partition name
+#SBATCH -t 24:00:00                                                 # maximum time of the job in seconds (time limit)
+#SBATCH -N 1                                                        # number of parallel tasks
+#SBATCH -c 36                                                       # number of cores per task
+#SBATCH -o ./slurm_%j.out                                           # standard output redirection
+#SBATCH -e ./slurm_%j.err                                           # standard error redirection
 ```
 - **test_submit_SLURM.sh** (Optional): shell script for stimulating pipeline jobs.
 
