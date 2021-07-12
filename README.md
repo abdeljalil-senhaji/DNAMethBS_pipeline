@@ -21,7 +21,7 @@ This pipeline is based on **Snakemake**. It is able to detect DNA methylation in
 - Detection of methylated cytosines (**mC**) in the three methylation contexts
 - Basic **statistical analyzes** on the detection of methylations
 
-`![bootstrap](Images/workflow.png)`
+`![bootstrap](Images/rg_dag-meth.png)`
 
 ## Environment pipeline
 
