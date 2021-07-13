@@ -117,7 +117,7 @@ git clone "https://gitlab................................"
 cd DNAmethBS_pipeline
 ```
 - Configure config.yml according to the instructions the file.
-- Configure submit_SLURM.sh to defene cpu and memory resources for each rule and lunch the workflow.
+- Configure submit_SLURM.sh to define cpu and memory resources for each rule and lunch the workflow.
 
 #### Step 2: Configure workflow
 
@@ -164,7 +164,7 @@ ADAPTER1: --illumina                        # Adapter sequence to be trimmed. If
 ADAPTER2: AAATCAAAAAAAC                     # Optional adapter sequence to be trimmed off read 2 of paired-end files.
 ```
 > Note : tools are used by **default** except for trimgalore
-When using a pipeline on the sequencing data **MC-Seq**, an advantage in the pipeline allows to specify that the regions **On-target**, for this it is necessary to indicate **1** in the **Target** and place the **file bed** where there are regions of interest in the pipeline's **script** folder. If you do not use the MC-seq technique, indicate **0**
+When using a pipeline on the sequencing data **MC-Seq**, a parameter in the pipeline allows to specify to work on **On-target** regions. For this it is necessary to indicate "**1**" in the variable "**Target**" and place the **file bed** where there are regions of interest in the pipeline's **script** folder. If you do not use the MC-seq technique, indicate "**0**".
 ```
 # SELECT EITHER BY SPECIFY THE ONTARGET (1) OR NOT (0)
 Target: 0
