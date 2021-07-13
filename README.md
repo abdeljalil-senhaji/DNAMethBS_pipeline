@@ -1,5 +1,5 @@
 
-# Pipeline detection DNA methylation : **DNAmethBS** 
+# Pipeline detection DNA methylation: **DNAmethBS** 
 
   ![bootstrap](Image/logo1.PNG)
 
@@ -67,7 +67,7 @@ The pipleine is represented in the graph below:
 
 ```
 
-#### Pipeline environment Folder :
+#### Pipeline environment Folder:
 - **Results**: results folder contain :
 > - Ordered folder of results for each pipeline job.
 > - **data_symbolic** : symbolic link of the input data files.
@@ -76,20 +76,20 @@ The pipleine is represented in the graph below:
 - **Data**: folder where there are the samples (I put 2 samples with 1000bp just for the pipeline test).
 - **Rules**: folder that contains each pipeline rule independently (another way to create rules under snakemake) (optionel)
 - **script**: folder that contains the scripts created for our pipeline.
-- **Tools** : tools that are not installed in the cluster.
+- **Tools**: tools that are not installed in the cluster.
 - **DAG**:  visualizing the DAG (Directed Acyclic Graph) of jobs.
 - **Config_editeur**: scripts for adapting VIM editors to be adapted with snakemake.
-- **file_references** : folder where there are the files necessary for the pipeline (for example: the reference fasta genome ...).
-#### Pipeline environment File :
+- **file_references**: folder where there are the files necessary for the pipeline (for example: the reference fasta genome ...).
+#### Pipeline environment File:
 - **test_submit_SLURM.sh**: script sbatch of job submission for pipeline test.
 - **submit_SLURM.sh**: pipeline submission shell script, This script will be launched as a task on the cluster.
 - **config.yaml**: configuration pipeline file.
 - **snakefile.smk**: file where there are all the pipeline rules.
-- **clean.sh** : script to remove hidden snakemake files and results
+- **clean.sh**: script to remove hidden snakemake files and results
 
 submit_SLURM.sh and test_submit_SLURM.sh are specific to the **SLURM cluster**. Therefore, if you are using another cluster, you must create other files.
 
-## System requirements :
+## System requirements:
 
 Here is the list of tool **dependencies** with the version tested and used for the pipeline.
 
@@ -121,7 +121,7 @@ cd DNAmethBS_pipeline
 
 #### Step 2: Configure workflow
 
-**>Input :**  
+**>Input:**  
 
 - The pipeline takes **paired end**, R1 and R2 reads as input .
 - when launching the pipeline with to submit script (**submit_SLURM.sh**), it starts with a data preparation step with a shell script (**preparing_symbolic.sh**) which allows you to create symbolic links (allows you to assign another access path to a file by pointing to a file name), to adapt the different possible extensions of the reads in **_ R1.fastq.gz \ | _R2. fastq.gz**. 
@@ -163,7 +163,7 @@ QUALITY: 20                                 # Trim low-quality ends from reads i
 ADAPTER1: --illumina                        # Adapter sequence to be trimmed. If not specified explicitly
 ADAPTER2: AAATCAAAAAAAC                     # Optional adapter sequence to be trimmed off read 2 of paired-end files.
 ```
-> Note : tools are used by **default** except for trimgalore
+> **Note:** tools are used by **default** except for trimgalore
 When using a pipeline on the sequencing data **MC-Seq**, a parameter in the pipeline allows to specify to work on **On-target** regions. For this it is necessary to indicate "**1**" in the variable "**Target**" and place the **file bed** where there are regions of interest in the pipeline's **script** folder. If you do not use the MC-seq technique, indicate "**0**".
 ```
 # SELECT EITHER BY SPECIFY THE ONTARGET (1) OR NOT (0)
@@ -171,11 +171,11 @@ Target: 0
 #Path the file bed 
 pathbed: "/path/script/merge_covered.bed"
 ```
-- **submit_SLURM.sh**: pipeline submission shell script, This script will be launched as a task on the cluster, acting as a "master" script executing all the tasks required at all stages of the pipeline.
+- **submit_SLURM.sh** is the pipeline submission shell script. It will be launched as a task on the cluster, acting as a "master" script executing all the tasks required at all stages of the pipeline.
 ```
 path_work_env= '/path/envirennement_pipeline'
 ```
-Sbatch configuration for the **Slurm cluster** example:
+See below for a Sbatch configuration example for the **Slurm cluster**:
 ```
 #SBATCH -J DNAMethBS-pipe-methylation-DNA                       # job name
 #SBATCH -q default                                              # partition name
@@ -189,11 +189,11 @@ Sbatch configuration for the **Slurm cluster** example:
 
 > **Note:**
 > - It is advisable after each test step to restart the clean.sh script which will delete the hidden **Snakemake** files and the results in order to avoid the problems of submission errors.
-> - When launching the pipeline, you have the choice of working on the same pipeline directory or on another location, except it requires each time to change the paths of these files.
+> - When launching the pipeline, you have the choice of working on the same pipeline directory or on another location. In this case you only need to change the path to the result directory. However, if you modify the pipeline location you will need to modifify pipeline environment path also (pipeline location and tools if so).
 
 #### Launch the workflow
 
-**>Submission command line :**
+**>Submission command line:**
 
 You can start by boing a dry run test to visualize all the jobs and commands:
 ```
@@ -203,8 +203,8 @@ To run on slurm:
 ```
 $ sbatch submit_SLURM.sh /path/data/ /path/config.yml
 ```
-> Note :  The command line for launching the pipeline (Note: **Important to put the entire path to indicate the data and the config file**).
-> 
+> **Note:**  The command line for launching the pipeline (Note: **Important to put the entire path to indicate the data and the config file**).
+
 ## 1. Exemple file configuration
 ```
 
