@@ -25,7 +25,7 @@ This pipeline is based on **Snakemake**. It is able to detect DNA methylation fo
 
 The pipleine is represented in the graph below: 
 
-`![bootstrap](Images/rg_dag-meth.png)`
+![bootstrap](Images/pip_part.PNG)
 
 ## Description environment pipeline
 
