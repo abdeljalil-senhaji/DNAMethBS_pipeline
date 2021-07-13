@@ -137,7 +137,7 @@ Example of acceptable symbolic links, with (...) Corresponds to the baseName of 
 
 > **Note: whatever is written in upper or lower case is acceptable**                                     
 > **Note: if there is an error compared to the data, remember to rename the input, indicate the extension for the reads forword and reverse (_R1.fastq.gz \ | _R2.fastq.gz)**.
-- The command line for launching the pipeline (Note: **Important to put the entire path to indicate the data and the config file**).
+
 
 ## Usage
 
@@ -203,7 +203,8 @@ To run on slurm:
 ```
 $ sbatch submit_SLURM.sh /path/data/ /path/config.yml
 ```
-
+> Note :  The command line for launching the pipeline (Note: **Important to put the entire path to indicate the data and the config file**).
+> 
 ## 1. Exemple file configuration
 ```
 
