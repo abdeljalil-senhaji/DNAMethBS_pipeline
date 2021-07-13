@@ -73,23 +73,22 @@ To run the pipeline, it is necessary to fill in these files:
 - **Config.yml**: file configuration pipeline 
 Modify the necessary pipeline paths : 
 ```
-pathresults: "path/Results/"                                      # Path results pipeline
-path-work-env: "path/DNAMethBS_pipeline/"                         # path envirement pipeline
-tools: "path/Tools/BSMAPz-master"                                 # Tools pipeline
-REF_GENOME: "/path/.fasta"                                        # reference genome
+pathresults: "path/Results/"                                     # Path results pipeline
+path-work-env: "path/DNAMethBS_pipeline/"                        # path envirement pipeline
+tools: "path/Tools/BSMAPz-master"                                # Tools pipeline
+REF_GENOME: "/path/.fasta"                                       # reference genome
 ```
 Parameter of the **Trimgalore** tool :
 ```
 # Params_trimgalore
-ERROR_RATE: 0.1                                                   # Maximum allowed error rate (no. of errors divided by the length of the matching region)
-LENGTH: 36                                                        # Discard reads that became shorter than length INT because of either quality or adapter trimming. 
-QUALITY: 20                                                       # Trim low-quality ends from reads in addition to adapter removal.
-ADAPTER1: --illumina                                              # Adapter sequence to be trimmed. If not specified explicitly
-ADAPTER2: AAATCAAAAAAAC                                           # Optional adapter sequence to be trimmed off read 2 of paired-end files.
+ERROR_RATE: 0.1                                     # Maximum allowed error rate (no. of errors divided by the length of the matching region)
+LENGTH: 36                                          # Discard reads that became shorter than length INT because of either quality or adapter trimming. 
+QUALITY: 20                                         # Trim low-quality ends from reads in addition to adapter removal.
+ADAPTER1: --illumina                                # Adapter sequence to be trimmed. If not specified explicitly
+ADAPTER2: AAATCAAAAAAAC                             # Optional adapter sequence to be trimmed off read 2 of paired-end files.
 ```
 > Note : tools are used by **default** except for trimgalore
-
-When using a pipeline on the **MC-Seq** sequencing data, an advantage option in the pipeline allows to specify that the regions **on-target**, for this it is necessary to indicate **1** in the **Target** variable and to put the **file bed** where there are regions of interest in the pipeline **script** folder.
+When using a pipeline on the sequencing data **MC-Seq**, an advantage in the pipeline allows to specify that the regions **On-target**, for this it is necessary to indicate **1** in the **Target** and place the **file bed** where there are regions of interest in the pipeline's **script** folder. If you do not use the MC-seq technique, indicate **0**
 ```
 # SELECT EITHER BY SPECIFY THE ONTARGET (1) OR NOT (0)
 Target: 0
@@ -102,13 +101,13 @@ path_work_env= '/path/envirennement_pipeline'
 ```
 Sbatch configuration for the Slurm cluster example:
 ```
-#SBATCH -J DNAMethBS-pipe-methylation-DNA                           # job name
-#SBATCH -q default                                                  # partition name
-#SBATCH -t 24:00:00                                                 # maximum time of the job in seconds (time limit)
-#SBATCH -N 1                                                        # number of parallel tasks
-#SBATCH -c 36                                                       # number of cores per task
-#SBATCH -o ./slurm_%j.out                                           # standard output redirection
-#SBATCH -e ./slurm_%j.err                                           # standard error redirection
+#SBATCH -J DNAMethBS-pipe-methylation-DNA                         # job name
+#SBATCH -q default                                                # partition name
+#SBATCH -t 24:00:00                                               # maximum time of the job in seconds (time limit)
+#SBATCH -N 1                                                      # number of parallel tasks
+#SBATCH -c 36                                                     # number of cores per task
+#SBATCH -o ./slurm_%j.out                                         # standard output redirection
+#SBATCH -e ./slurm_%j.err                                         # standard error redirection
 ```
 - **test_submit_SLURM.sh** (Optional): shell script for stimulating pipeline jobs.
 
