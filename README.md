@@ -126,15 +126,16 @@ cd DNAmethBS_pipeline
 - The pipeline takes **paired end**, R1 and R2 reads as input .
 - when launching the pipeline with to submit script (**submit_SLURM.sh**), it starts with a data preparation step with a shell script (**preparing_symbolic.sh**) which allows you to create symbolic links (allows you to assign another access path to a file by pointing to a file name), to adapt the different possible extensions of the reads in **_ R1.fastq.gz \ | _R2. fastq.gz**. 
 Example of acceptable symbolic links  :    
-- (...).1.fastq.gz
-- (...).1.fq.gz
-- 1_(...).fq.gz
-- 1_1_(...).fastq.gz
-- _1_1_(...).fq.gz
-- (...)_R1.fastq.gz   
-- (...).R1.fastq.gz
-- Ps. (...) Corresponds to the baseName of sample
-**Note: whatever is written in upper or lower case is acceptable !!                                     
+-- (...).1.fastq.gz
+-- (...).1.fq.gz
+-- 1_(...).fq.gz
+-- 1_1_(...).fastq.gz
+-- _1_1_(...).fq.gz
+-- (...)_R1.fastq.gz   
+-- (...).R1.fastq.gz
+-- Ps. (...) Corresponds to the baseName of sample
+
+**Note: whatever is written in upper or lower case is acceptable**                                     
 **Note: if there is an error compared to the data, remember to rename the input, indicate the extension for the reads forword and reverse (_R1.fastq.gz \ | _R2.fastq.gz)**.
 - The command line for launching the pipeline (Note: **Important to put the entire path to indicate the data and the config file**).
 
