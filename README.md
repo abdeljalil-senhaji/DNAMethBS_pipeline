@@ -6,7 +6,7 @@
 
 A bioinformatics pipeline for the **detection of DNA methylation** from **WGBS (Whole Genome Bisulfite Sequencing)** and **MC-Seq (Methyl-capture Sequencing)** sequencing data. This pipeline, adapted to the needs of the **EpiTree project**, can be fully transposed to other methylation datasets in plants. The pipeline was built as part of the **ANR project EpiTree** ([https://www6.inrae.fr/epitree-project/Le-projet-EPITREE](https://www6.inrae.fr/epitree-project/Le-projet-EPITREE)).
 
-![bootstrap](Image//Le-projet-EPITREE_inra_image.png)
+![bootstrap](Image/Le-projet-EPITREE_inra_image.png)
 
 ## Authors
 * Abdeljalil SENHAJI RACHIK, https://github.com/abdeljalil-senhaji
@@ -25,7 +25,7 @@ This pipeline is based on **Snakemake**. It is able to detect DNA methylation fo
 
 The pipleine is represented in the graph below: 
 
-![bootstrap](Images/pip_part.PNG)
+![bootstrap1](Image/pip_part.PNG)
 
 ## Description environment pipeline
 
