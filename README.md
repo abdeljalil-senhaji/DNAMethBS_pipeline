@@ -1,11 +1,10 @@
 
-# Pipeline detection DNA methylation: **DNAmethBS** 
-
   ![bootstrap](Image/logo1.PNG)
 
 [![Documentation](https://img.shields.io/badge/Documentation-github-brightgreen.svg?style=for-the-badge)](https://github.com/abdeljalil-senhaji/DNAMethBS_pipeline)
 [![DOI](https://zenodo.org/badge/383458164.svg)](https://zenodo.org/badge/latestdoi/383458164)
 
+# Pipeline detection DNA methylation: **DNAmethBS** 
 
 A bioinformatics pipeline for the **detection of DNA methylation** from **WGBS (Whole Genome Bisulfite Sequencing)** and **MC-Seq (Methyl-capture Sequencing)** sequencing data. This pipeline, adapted to the needs of the **EpiTree project**, can be fully transposed to other methylation datasets in plants. The pipeline was built as part of the **ANR project EpiTree** ([https://www6.inrae.fr/epitree-project/Le-projet-EPITREE](https://www6.inrae.fr/epitree-project/Le-projet-EPITREE)).
 
